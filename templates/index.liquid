@@ -1,5 +1,9 @@
   <h2>{{ collections['frontpage'].title }}</h2>
 
 {% for product in collections['sale-potions'].products %}
+  <div>
+       <h4>{{ product.title }}</h4> 
+        <p>{{ product.price }}</p>
+  </div>
   {{- product.title | link_to: product.url }}
 {% endfor %}
