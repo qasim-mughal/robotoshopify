@@ -1,1 +1,13 @@
 <h1>{{ product.title }}</h1>
+<p>{{ product.price | money }}</p>
+<div>{{ product.description }}</div>
+{% form 'product', product %}
+
+  <select name="id">
+    {% for variant in product.variants  %}
+      <option value="{{ product.id }}">
+        {{ variant.title }}
+      </option>
+      {% endfor %}
+  </select>
+  {% endform %} 
