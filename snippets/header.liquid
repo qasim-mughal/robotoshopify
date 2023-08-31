@@ -6,7 +6,7 @@
         <!-- Main menu -->
         {% for link in linklists.main-menu.links -%}
 
-         <li>{{ link.title | link_to: link.url }}</li>
+         {{ link.title | link_to: link.url }}
 
         {%- endfor %}
       
