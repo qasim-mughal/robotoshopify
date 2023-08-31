@@ -15,7 +15,7 @@
   <div>
       <img src={{ product.featured_image | img_url }}/>
        <h4>{{ product.title }}</h4> 
-        <p>{{ product.price }}</p>
+        <p>{{ product.price | money}}</p>
     
   </div>
   {{- product.title | link_to: product.url }} 
