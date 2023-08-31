@@ -1,6 +1,6 @@
   <h2>{{ collections['frontpage'].title }}</h2>
 
-{% for product in collections['sale-potions'].products %}
+{% for product in collections['frontpage'].products %}
   <div>
       <img src="{{ product.featured_image | image_tag }}"/>
        <h4>{{ product.title }}</h4> 
