@@ -2,7 +2,7 @@
 
 {% for product in collections['sale-potions'].products %}
   <div>
-      <img src="{{ product.featured_image | image_tag: }}"/>
+      <img src="{{ product.featured_image | image_tag }}"/>
        <h4>{{ product.title }}</h4> 
         <p>{{ product.price }}</p>
     
