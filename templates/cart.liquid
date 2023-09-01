@@ -10,6 +10,7 @@
       <img src="{{ item.image | image_url: width:300}}"/>
       <h4>{{ item.title }}</h4>
       <p>{{ item.price | money }}</p>
+      <a href="{{ item.url_to_remove }}">Remove</a>
     </div>
   {% endfor %}
   <p>{{ cart.total_price|money }}</p>
