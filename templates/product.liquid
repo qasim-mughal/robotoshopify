@@ -1,22 +1,8 @@
 <h1>This is product page!</h1>
-
-
- <div class="card" style="width:10rem;">
-   <img class="card-img-top"  alt="Card image cap" src="{{ product.featured_image | image_url }}"/>
-  <div class="card-body">
-    <h4 class="card-title">{{ product.title }}</h4>
-    <p class="card-text">{{ product.description }}</p>
-    <h6 class="card-title">{{ product.price | money }}</h6>
-    
-    <button type="submit">Add to Cart</button>
-  </div>
-</div> 
-
-
-
-
-<p></p>
-<div></div>
+<img height="300" src="{{ product.featured_image | image_url }}"/>
+<h3>{{ product.title }}</h3>
+<p>{{ product.price | money }}</p>
+<div>{{ product.description }}</div>
 {% form 'product', product %}
 
   <select name="id">
