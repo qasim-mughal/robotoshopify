@@ -21,12 +21,29 @@
         </div>
       {% endfor %}
     </div>
-  </div>
-    <label  class="form-control" >Gift note:</label>
-    <textarea class="form-control" name="note"></textarea>
 
-     <p>Total Items: {{ cart.item_count }}</p>
-      <p>Total: {{ cart.total_price|money }}</p>
+    <div class=row>
+        <div class="col-lg-8"></div>
+        <div class="col-lg-4">
+          <label  class="form-control" >Gift note:</label>
+          <textarea class="form-control" name="note"></textarea>
+          <table>
+            <tr>
+              <td> Total Items: </td>
+              <td>{{ cart.item_count }}</td>
+            </tr>
+            <tr>
+              <td> Total: </td>
+              <td>{{ cart.total_price|money }}</td>
+            </tr>
+          </table>
+        </div>
+    </div>
+  </div>
+    
+
+   
+      
       <button  class="form-control" type="submit" name="update"> Update Cart</button>
       <button  class="form-control" type="submit" name="checkout">Checkout</button>
   {% endif %}
