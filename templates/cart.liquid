@@ -1,1 +1,12 @@
 <h1>Cart</h1>
+
+
+{% for item in cart.items %}
+
+    <div>
+
+      <img src="{{ item.image | image_url: width:300}}"/>
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.price | money }}</p>
+    </div>
+  {% endfor %}
