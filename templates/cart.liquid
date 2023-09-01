@@ -7,15 +7,23 @@
   <p>Hye! Your cart is Empty Bruuh</p>
 {% else %}
 {% for item in cart.items %}
-
-    <div>
-
-      <img src="{{ item.image | image_url: width:300}}"/>
-      <h4>{{ item.title }}</h4>
-      <p>{{ item.final_line_price | money }}</p>
-      <input  class="form-control" name="updates[]" value="{{ item.quantity }}" >
-      <a href="{{ item.url_to_remove }}">Remove</a>
+   
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-4">
+    
+          <img src="{{ item.image | image_url: width:300}}"/>
+      
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.final_line_price | money }}</p>
+          <input  class="form-control" name="updates[]" value="{{ item.quantity }}" >
+          <a href="{{ item.url_to_remove }}">Remove</a>
+          </div>
+              
+        </div>
+      
     </div>
+   
   {% endfor %}
   
     <label  class="form-control" >Gift note:</label>
