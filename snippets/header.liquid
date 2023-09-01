@@ -1,14 +1,34 @@
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">{{shop.name}}</a>
+    </div>
+    <ul class="nav navbar-nav">
+     {% for link in linklists.main-menu.links -%}
+        <li class="">{{ link.title | link_to: link.url }}</li>
+        
+
+        {%- endfor %}
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
 <header>
 
-    <h1>{{shop.name}}</h1>
+    <h1></h1>
 
     <ul>
         <!-- Main menu -->
-        {% for link in linklists.main-menu.links -%}
-
-         {{ link.title | link_to: link.url }}
-
-        {%- endfor %}
+        
       
     </ul>
 </header>
