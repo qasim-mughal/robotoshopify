@@ -13,17 +13,17 @@
       <img src="{{ item.image | image_url: width:300}}"/>
       <h4>{{ item.title }}</h4>
       <p>{{ item.final_line_price | money }}</p>
-      <input name="updates[]" value="{{ item.quantity }}" >
+      <input  class="form-control" name="updates[]" value="{{ item.quantity }}" >
       <a href="{{ item.url_to_remove }}">Remove</a>
     </div>
   {% endfor %}
   
-    <label class="mt-4">Gift note:</label>
-    <textarea name="note"></textarea>
+    <label >Gift note:</label>
+    <textarea class="form-control" name="note"></textarea>
 
      <p>Total Items: {{ cart.item_count }}</p>
       <p>Total: {{ cart.total_price|money }}</p>
-      <button type="submit" name="update"> Update Cart</button>
-      <button type="submit" name="checkout">Checkout</button>
+      <button  class="form-control" type="submit" name="update"> Update Cart</button>
+      <button  class="form-control" type="submit" name="checkout">Checkout</button>
   {% endif %}
 {% endform %}
