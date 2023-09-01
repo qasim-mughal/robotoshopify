@@ -7,7 +7,7 @@
 
   <select name="id">
     {% for variant in product.variants  %}
-      <option value="{{ product.id }}">
+      <option value="{{variant.id }}">
         {{ variant.title }}
       </option>
       {% endfor %}
