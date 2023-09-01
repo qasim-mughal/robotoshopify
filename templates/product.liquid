@@ -5,13 +5,13 @@
 <div>{{ product.description }}</div>
 {% form 'product', product %}
 
-  <select name="id">
-    {% for product in products  %}
+  <!-- <select name="id">
+    {% for variant in product.variants  %}
       <option value="{{ product.id }}">
-        {{ product.title }}
+        {{ variant.title }}
       </option>
       {% endfor %}
-  </select>
+  </select> -->
 
   <button type="submit">Add to Cart</button>
   {% endform %} 
