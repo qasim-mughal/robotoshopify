@@ -13,7 +13,7 @@
       <a href="{{ item.url_to_remove }}">Remove</a>
     </div>
   {% endfor %}
-  <p>{{ cart.total_price|money }}</p>
+  <p>Total: {{ cart.total_price|money }}</p>
   <button type="submit" name="checkout">Checkout</button>
 
   {% endform %}
