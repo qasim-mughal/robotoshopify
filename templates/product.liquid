@@ -4,17 +4,17 @@
  <div class="card" style="width: 18rem;">
    <img class="card-img-top"  alt="Card image cap" src="{{ product.featured_image | image_url }}"/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">{{ product.title }}</h5>
+    <p class="card-text">{{ product.description }}</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div> 
 
 
 
-<h3>{{ product.title }}</h3>
+
 <p>{{ product.price | money }}</p>
-<div>{{ product.description }}</div>
+<div></div>
 {% form 'product', product %}
 
   <select name="id">
