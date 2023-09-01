@@ -2,8 +2,10 @@
 
 <h1>Cart</h1>
 
-{% if cart.empty %}}
+{% if cart.empty? %}}
 
+  <p>Hye! Your cart is Empty Bruuh</p>
+{% else %}
 {% for item in cart.items %}
 
     <div>
